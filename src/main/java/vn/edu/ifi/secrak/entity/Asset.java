@@ -28,11 +28,7 @@ public class Asset {
 
     }
 
-<<<<<<< HEAD
 
-=======
-    public  Asset()
->>>>>>> origin/master
 
 	/**
 	 * @return the assetId
