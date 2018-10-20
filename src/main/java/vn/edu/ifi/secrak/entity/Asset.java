@@ -1,16 +1,12 @@
 package vn.edu.ifi.secrak.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="asset")
 public class Asset {
-	
+
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long assetId;
@@ -23,6 +19,16 @@ public class Asset {
 	
 	@Column(name="asset_status")
 	private byte assetStatus;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="shop_id")
+	private Shop shop;
+
+	public Asset(){
+
+    }
+
+    public  Asset()
 
 	/**
 	 * @return the assetId
