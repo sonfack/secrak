@@ -1,4 +1,4 @@
-package vn.edu.ifi.secrak.service;
+package vn.edu.ifi.secrak.service.shop;
 
 import java.util.List;
 

@@ -1,11 +1,10 @@
 package vn.edu.ifi.secrak.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.aspectj.weaver.patterns.TypePatternQuestions;
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="shop")
@@ -26,8 +25,12 @@ public class Shop {
 	
 	@Column(name="shop_status")
 	private byte shopStatus;
-	
-	public String getShopEmail() {
+
+    @OneToMany
+    @JoinColumn(name= "shop_id")
+    private List<Asset> asset = new ArrayList<Asset>();
+
+    public String getShopEmail() {
 		return shopEmail;
 	}
 	public void setShopEmail(String shopEmail) {
