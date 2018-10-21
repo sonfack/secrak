@@ -16,7 +16,13 @@ public class Asset {
 	
 	@Column(name="asset_idnumber")
 	private String idNumber; 
-	
+
+	@Column(name = "asset_price")
+    private float price ;
+
+	@Column(name = "asset_currency")
+    private String currency;
+
 	@Column(name="asset_status")
 	private byte assetStatus;
 
@@ -28,8 +34,23 @@ public class Asset {
 
     }
 
+    public float getPrice() {
+        return price;
+    }
 
-	/**
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    /**
 	 * @return the assetId
 	 */
 	public Long getAssetId() {
