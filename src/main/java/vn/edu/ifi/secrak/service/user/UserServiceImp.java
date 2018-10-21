@@ -43,41 +43,40 @@ public class UserServiceImp implements UserService {
 
 	@Override
     @RequestMapping(value = "/api/secrak/get/user/{id}", method = RequestMethod.GET)
-	public User getUserBId(@PathVariable Long id) {
+	public User getUserById(@PathVariable Long id) {
 	    return userRepo.findById(id).get();
 	}
 
-    @Override
-    public User getUserByLogin(String login) {
-        return null;
+	@Override
+    @RequestMapping(value = "/api/secrak/get/user/login/{login}", method = RequestMethod.GET)
+    public User getUserByLogin(@PathVariable String login){
+	    return userRepo.findByUserLogin(login);
     }
 
     @Override
+	@RequestMapping(value = "/api/secrak/get/user", method = RequestMethod.GET)
 	public List<User> getAllUser() {
-		// TODO Auto-generated method stub
-		return null;
+		return userRepo.findAll();
 	}
 
-	@Override
-	public String getUserLogin(User user) {
-		return user.getUserLogin(); 
-	}
+    @Override
+    @RequestMapping(value = "/api/secrak/user/password{login}", method = RequestMethod.GET)
+    public String getUserPassword(@PathVariable String login) {
+        return userRepo.findByUserLogin(login).getUserPassword();
+    }
 
-	@Override
-	public String getUserPassWord(User user) {
-		return user.getUserPassWord();
-	}
-
-	@Override
+    @Override
 	public void setUserLogin(User user, String login) {
 		user.setUserLogin(login);
 	}
 
 	@Override
-	public void setUserPassWord(User user, String password) {
-		user.setUserPassWord(password);
+    @RequestMapping(value = "/api/secrak/save/user/password", method = RequestMethod.PUT)
+	public void setUserPassword(User user, String password) {
+		user.setUserPassword(password);
 	}
 
-	
+
+
 
 }

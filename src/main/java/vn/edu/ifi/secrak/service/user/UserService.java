@@ -15,17 +15,15 @@ public interface UserService {
 	
 	void deletUser(User user);
 
-	User getUserBId(Long id);
+	User getUserById(Long id);
 
-	User getUserByLogin(String login);
+    User getUserByLogin(String login);
 
 	List<User> getAllUser();
-	
+
 	void setUserLogin(User user, String login); 
 	
-	void setUserPassWord(User user, String password); 
+	void setUserPassword(User user, String password);
 	
-	String getUserLogin(User user);
-	
-	String getUserPassWord(User user); 
+	String getUserPassword(String login);
 }

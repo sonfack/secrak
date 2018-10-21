@@ -9,6 +9,7 @@ public class Asset {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name = "asset_id")
 	private Long assetId;
 	
 	@Column(name="asset_mark")

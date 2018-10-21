@@ -21,11 +21,19 @@ public class User {
 	private String userLogin ;
 	
 	@Column(name="secrakuser_password")
-	private String userPassWord ;
+	private String userPassword ;
 
 	public  User(){
 
 	}
+
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
 
     public String getUserNumber() {
         return userNumber;
@@ -59,11 +67,7 @@ public class User {
         this.userLogin = userLogin;
     }
 
-    public String getUserPassWord() {
-        return userPassWord;
-    }
-
     public void setUserPassWord(String userPassWord) {
-        this.userPassWord = userPassWord;
+        this.userPassword = userPassWord;
     }
 }
