@@ -9,6 +9,7 @@ public interface ShopService {
 	Shop saveShop(Shop shop);
 	Shop updateShop(Shop shop);
 	void deleteShop(Shop shop);
+	void deleteShopById(Long id);
 	Shop getShopById(Long id);
 	List<Shop> getAllShop();
 }

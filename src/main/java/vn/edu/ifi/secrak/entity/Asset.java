@@ -29,7 +29,6 @@ public class Asset {
     }
 
 
-
 	/**
 	 * @return the assetId
 	 */
@@ -51,7 +50,15 @@ public class Asset {
 		return mark;
 	}
 
-	/**
+    public void setShop(Shop shop) {
+        this.shop = shop;
+    }
+
+    public Shop getShop() {
+        return shop;
+    }
+
+    /**
 	 * @param mark the mark to set
 	 */
 	public void setMark(String mark) {
@@ -92,7 +99,7 @@ public class Asset {
 	@Override
 	public String toString() {
 		return "Asset [assetId=" + assetId + ", mark=" + mark + ", idNumber=" + idNumber + ", assetStatus="
-				+ assetStatus + "]";
+				+ assetStatus + ", shopId="+shop.getShopId()+"]";
 	}
 	
 }

@@ -26,10 +26,8 @@ public class Shop {
 	@Column(name="shop_status")
 	private byte shopStatus;
 
-    @OneToMany
-    @JoinColumn(name= "shop_id")
-    private List<Asset> asset = new ArrayList<Asset>();
 
+    public Shop(){}
     public String getShopEmail() {
 		return shopEmail;
 	}
@@ -45,7 +43,7 @@ public class Shop {
 	public byte getShopStatus() {
 		return shopStatus;
 	}
-	public void setShopStatus(byte shopStatus) {
+    public void setShopStatus(byte shopStatus) {
 		this.shopStatus = shopStatus;
 	}
 	public String getShopName() {
