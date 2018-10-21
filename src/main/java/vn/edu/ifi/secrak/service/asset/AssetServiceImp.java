@@ -66,6 +66,7 @@ public class AssetServiceImp implements AssetService {
 	@Override
     @RequestMapping(value = "/api/secrak/get/asset/{id}", method = RequestMethod.GET)
 	public Asset getAssetById(@PathVariable Long id) {
+        System.out.println(assetRepo.findById(id).get().getShop());
 		return assetRepo.findById(id).get();
 	}
 
