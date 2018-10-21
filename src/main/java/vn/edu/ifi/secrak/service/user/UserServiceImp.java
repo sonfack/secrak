@@ -47,12 +47,12 @@ public class UserServiceImp implements UserService {
 	    return userRepo.findById(id).get();
 	}
 
-	@Override
-    @RequestMapping(value = "/api/secrak/get/user/{login}", method = RequestMethod.GET)
-    public User getUserByLogin(@PathVariable String login){
-	    return userRepo.findByUserLogin(login);
+    @Override
+    public User getUserByLogin(String login) {
+        return null;
     }
-	@Override
+
+    @Override
 	public List<User> getAllUser() {
 		// TODO Auto-generated method stub
 		return null;

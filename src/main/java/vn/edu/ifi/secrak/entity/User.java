@@ -3,67 +3,67 @@ package vn.edu.ifi.secrak.entity;
 import javax.persistence.*;
 
 @Entity
+@Table(name="secrakuser")
 public class User {
+
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="user_id")
+	@Column(name="secrakuser_id")
 	private Long userId;
 	
-	@Column(name="user_fname")
-	private String userFirstName ;
-	
-	@Column(name="user_lname")
-	private String userLastName ;
-	
-	@Column(name="user_login", nullable=false, unique=true)
+	@Column(name="secrakuser_name")
+	private String userName ;
+
+    @Column(name="secrakuser_number")
+    private String userNumber ;
+
+	@Column(name="secrakuser_login", nullable=false, unique=true)
 	private String userLogin ;
 	
-	@Column(name="user_password")
+	@Column(name="secrakuser_password")
 	private String userPassWord ;
 
 	public  User(){
 
 	}
-	
-	public Long getUserId() {
-		return userId;
-	}
 
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
+    public String getUserNumber() {
+        return userNumber;
+    }
 
-	public String getUserFirstName() {
-		return userFirstName;
-	}
+    public void setUserNumber(String userNumber) {
+        this.userNumber = userNumber;
+    }
 
-	public void setUserFirstName(String userFirstName) {
-		this.userFirstName = userFirstName;
-	}
+    public Long getUserId() {
+        return userId;
+    }
 
-	public String getUserLastName() {
-		return userLastName;
-	}
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
-	public void setUserLastName(String userLastName) {
-		this.userLastName = userLastName;
-	}
+    public String getUserName() {
+        return userName;
+    }
 
-	public String getUserLogin() {
-		return userLogin;
-	}
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-	public void setUserLogin(String userLogin) {
-		this.userLogin = userLogin;
-	}
+    public String getUserLogin() {
+        return userLogin;
+    }
 
-	public String getUserPassWord() {
-		return userPassWord;
-	}
+    public void setUserLogin(String userLogin) {
+        this.userLogin = userLogin;
+    }
 
-	public void setUserPassWord(String userPassWord) {
-		this.userPassWord = userPassWord;
-	}
-	
-	
+    public String getUserPassWord() {
+        return userPassWord;
+    }
+
+    public void setUserPassWord(String userPassWord) {
+        this.userPassWord = userPassWord;
+    }
 }
