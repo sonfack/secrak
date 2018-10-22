@@ -26,7 +26,7 @@ public class UserServiceImp implements UserService {
 	@Override
     @RequestMapping(value = "/api/secrak/save/user", method = RequestMethod.POST)
 	public User saveUser(User user) {
-		return userRepo.save(user);
+	    return userRepo.save(user);
     }
 
 	@Override

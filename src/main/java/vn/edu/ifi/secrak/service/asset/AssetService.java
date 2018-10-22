@@ -2,6 +2,7 @@ package vn.edu.ifi.secrak.service.asset;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import vn.edu.ifi.secrak.entity.Asset;
 
 public interface AssetService {
@@ -17,6 +18,8 @@ public interface AssetService {
 	void deleteById(Long id);
 	
 	Asset getAssetById(Long id);
+
+	Asset getAssetByIdNumber(String idnumber);
 	
 	List<Asset> getAllAsset();
 }

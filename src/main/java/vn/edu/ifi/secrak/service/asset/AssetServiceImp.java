@@ -70,6 +70,12 @@ public class AssetServiceImp implements AssetService {
 		return assetRepo.findById(id).get();
 	}
 
+    @Override
+    @RequestMapping(value = "/api/secrak/get/asset/idnumber{idnumber}", method = RequestMethod.GET)
+    public Asset getAssetByIdNumber(@PathVariable String idnumber) {
+        return assetRepo.findByIdNumber(idnumber);
+    }
+
 	@Override
     @RequestMapping(value = "/api/secrak/get/asset", method = RequestMethod.GET)
 	public List<Asset> getAllAsset() {
