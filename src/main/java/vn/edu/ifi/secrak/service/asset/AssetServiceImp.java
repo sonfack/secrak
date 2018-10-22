@@ -71,7 +71,7 @@ public class AssetServiceImp implements AssetService {
 	}
 
     @Override
-    @RequestMapping(value = "/api/secrak/get/asset/idnumber{idnumber}", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/secrak/get/asset/idnumber/{idnumber}", method = RequestMethod.GET)
     public Asset getAssetByIdNumber(@PathVariable String idnumber) {
         return assetRepo.findByIdNumber(idnumber);
     }
