@@ -1,5 +1,7 @@
 package vn.edu.ifi.secrak.entity;
 
+import org.hibernate.annotations.UpdateTimestamp;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -11,6 +13,8 @@ public class Invoice {
     @Column(name="invoice_id")
     private Long invoiceId;
 
+    @UpdateTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "invoice_date")
     private Date invoicdDate;
 

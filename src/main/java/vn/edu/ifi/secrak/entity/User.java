@@ -1,6 +1,7 @@
 package vn.edu.ifi.secrak.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="secrakuser")
@@ -23,10 +24,22 @@ public class User {
 	@Column(name="secrakuser_password")
 	private String userPassword ;
 
-	public  User(){
+    @OneToMany
+    @JoinColumn(name = "buyer_id")
+    private List<Buyer> buyers;
+
+    public List<Buyer> getBuyers() {
+        return buyers;
+    }
+
+    public void setBuyers(List<Buyer> buyers) {
+        this.buyers = buyers;
+    }
+
+    public  User(){
 
 	}
-
+	
     public String getUserPassword() {
         return userPassword;
     }

@@ -2,9 +2,6 @@ package vn.edu.ifi.secrak.service.user;
 
 import java.util.List;
 
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import vn.edu.ifi.secrak.entity.User;
 
 public interface UserService {
