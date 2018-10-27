@@ -2,6 +2,9 @@ package vn.edu.ifi.secrak.entity;
 
 import javax.persistence.*;
 
+/**
+ * Class of the Asset entity that map the asset table in the database
+ */
 @Entity
 @Table(name="asset")
 public class Asset {
@@ -35,17 +38,32 @@ public class Asset {
 
     }
 
+    /**
+     * @return the price of an asset
+     */
     public float getPrice() {
         return price;
     }
 
+    /**
+     * This function sets the price of a asset
+     * @param price
+     */
     public void setPrice(float price) {
         this.price = price;
     }
 
+    /**
+     * @return the curreny
+     */
     public String getCurrency() {
         return currency;
     }
+
+    /**
+     * This function sets the currency
+     * @param currency
+     */
 
     public void setCurrency(String currency) {
         this.currency = currency;
@@ -72,10 +90,18 @@ public class Asset {
 		return mark;
 	}
 
+    /**
+     * This function sets the shop of an asset
+     * @param shop
+     */
     public void setShop(Shop shop) {
         this.shop = shop;
     }
 
+    /**
+     * This function get the shop of an asset
+     * @return
+     */
     public Shop getShop() {
         return shop;
     }
@@ -115,9 +141,7 @@ public class Asset {
 		this.assetStatus = assetStatus;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
+
 	@Override
 	public String toString() {
 		return "Asset [assetId=" + assetId + ", mark=" + mark + ", idNumber=" + idNumber + ", assetStatus="

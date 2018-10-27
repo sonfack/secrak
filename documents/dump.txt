@@ -1,0 +1,28 @@
+# Shops
+## POST 
+127.0.0.1:8080/api/secrak/save/shop?shopName=Big G&shopEmail=bigg@info.net&shopAddress= Ho Chi Minh &shopStatus=1
+127.0.0.1:8080/api/secrak/save/shop?shopName=Vivi Mark &shopEmail=vivi@info.net&shopAddress=Hanoi&shopStatus=1
+
+## GET 
+127.0.0.1:8080/api/secrak/get/shop
+
+# Assets 
+## POST
+127.0.0.1:8080/api/secrak/save/asset?mark=Motorola&idNumber=678877&assetStatus=1&shop=1&price=200&currency=usd
+127.0.0.1:8080/api/secrak/save/asset?mark=Nokia&idNumber=6343437&assetStatus=1&shop=1&price=300&currency=usd
+127.0.0.1:8080/api/secrak/save/asset?mark=Sony&idNumber=33434437&assetStatus=1&shop=1&price=300&currency=usd
+127.0.0.1:8080/api/secrak/save/asset?mark=Lenovo&idNumber=33488097&assetStatus=1&shop=2&price=350&currency=usd
+
+# Users
+## POST
+127.0.0.1:8080/api/secrak/save/user?userName=serge sonfack&userLogin=serge@info.net&userPassWord=serge&userNumber=34387
+127.0.0.1:8080/api/secrak/save/user?userName=Obed&userLogin=obed@info.net&userPassWord=obed&userNumber=34334387
+127.0.0.1:8080/api/secrak/save/user?userName=David&userLogin=david@info.net&userPassWord=david&userNumber=33434
+127.0.0.1:8080/api/secrak/save/user?userName=Benson&userLogin=benson@info.net&userPassWord=benson&userNumber=33434334
+
+# Invoice
+## POST
+127.0.0.1:8080/api/secrak/user/8/asset/4/save/invoice
+
+
+

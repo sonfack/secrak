@@ -24,17 +24,17 @@ public class User {
 	@Column(name="secrakuser_password")
 	private String userPassword ;
 
-    @OneToMany
+    /*@OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "buyer_id")
-    private List<Buyer> buyers;
+    private List<Buyer> buyers;*/
 
-    public List<Buyer> getBuyers() {
+    /*public List<Buyer> getBuyers() {
         return buyers;
     }
 
     public void setBuyers(List<Buyer> buyers) {
         this.buyers = buyers;
-    }
+    }*/
 
     public  User(){
 

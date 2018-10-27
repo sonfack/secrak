@@ -42,8 +42,9 @@ public class BuyerServiceImp implements BuyerService{
     @RequestMapping(value = "/api/secrak/user/{id}/save/buyer")
     public Buyer saveBuyerByUserId(@PathVariable Long id) {
         User user = userRepo.findById(id).get();
+        System.out.println("---------------------------------- "+user.getUserName());
         Buyer buyer = new Buyer();
-        //buyer.setUser(user);
+        buyer.setUser(user);
         return buyerRepo.save(buyer);
     }
 
